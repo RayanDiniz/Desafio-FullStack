@@ -1,0 +1,42 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "Api Desafio FullStack"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "rayancassiokiol@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "http://desafiofullstack.zinidtech.com.br"
+basePath: "/api"
+tags:
+- name: "Desenvolvedores"
+  description: "Endpoints dos desenvolvedores"
+
+- name: "Níveis"
+  description: "Endpoists para os níveis"
+
+schemes:
+- "https"
+- "http"
+paths:
+  /devs:
+    get:
+      tags:
+      - "Desenvolvedores"
+      summary: "Retorna desenvolvedores cadastrados na API"
+      description: ""
+      operationId: "addPet"
+      produces:
+      - "application/json"
+      parameters: 
+      - in: "query"
+        name: "nome"
+        description: "Retornar desenvolvedor de acordo com a Query 'nome'"
+      responses:
+        "200":
+          description: "successful operation"
+      security:
+      - api_key: []
